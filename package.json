@@ -1,0 +1,17 @@
+{
+  "name": "assessment-grid",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["assessment", "grid", "iq", "evaluation"],
+  "author": "",
+  "license": "ISC",
+  "description": "Assessment Grid Application with IQ evaluation",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
