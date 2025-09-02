@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Grid</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- IQ Marks Container -->
+        <div class="iq-container">
+            <label for="iq-input">IQ Marks:</label>
+            <input type="number" id="iq-input" min="0" max="100" value="0">
+            <button id="clear-button" onclick="clearAll()">Clear</button>
+        </div>
+
+        <!-- Grid Container 1 -->
+        <div class="main-container">
+            <div class="grid-container" id="grid1">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>4</th>
+                            <th>3</th>
+                            <th>2</th>
+                            <th>1</th>
+                            <th>TOTAL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="row-label">MC</td>
+                            <td><input type="checkbox" data-points="4" data-row="mc" data-grid="1"></td>
+                            <td><input type="checkbox" data-points="3" data-row="mc" data-grid="1"></td>
+                            <td><input type="checkbox" data-points="2" data-row="mc" data-grid="1"></td>
+                            <td><input type="checkbox" data-points="1" data-row="mc" data-grid="1"></td>
+                            <td class="total-cell" id="mc-total-1">0</td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">PERCEPTION</td>
+                            <td><input type="checkbox" data-points="4" data-row="perception" data-grid="1"></td>
+                            <td><input type="checkbox" data-points="3" data-row="perception" data-grid="1"></td>
+                            <td><input type="checkbox" data-points="2" data-row="perception" data-grid="1"></td>
+                            <td><input type="checkbox" data-points="1" data-row="perception" data-grid="1"></td>
+                            <td class="total-cell" id="perception-total-1">0</td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">IMPACT</td>
+                            <td><input type="checkbox" data-points="4" data-row="impact" data-grid="1"></td>
+                            <td><input type="checkbox" data-points="3" data-row="impact" data-grid="1"></td>
+                            <td><input type="checkbox" data-points="2" data-row="impact" data-grid="1"></td>
+                            <td><input type="checkbox" data-points="1" data-row="impact" data-grid="1"></td>
+                            <td class="total-cell" id="impact-total-1">0</td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">VE</td>
+                            <td><input type="checkbox" data-points="4" data-row="ve" data-grid="1"></td>
+                            <td><input type="checkbox" data-points="3" data-row="ve" data-grid="1"></td>
+                            <td><input type="checkbox" data-points="2" data-row="ve" data-grid="1"></td>
+                            <td><input type="checkbox" data-points="1" data-row="ve" data-grid="1"></td>
+                            <td class="total-cell" id="ve-total-1">0</td>
+                        </tr>
+                        <tr class="grand-total-row">
+                            <td colspan="5" class="grand-total-label">TOTAL</td>
+                            <td class="grand-total-cell" id="grand-total-1">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="result-container">
+                <h3>Result Type</h3>
+                <div class="result-options">
+                    <div class="result-option">NO</div>
+                    <div class="result-option">M</div>
+                    <div class="result-option">Y</div>
+                    <div class="result-option">NMC</div>
+                </div>
+                <div class="result-display" id="result-1"></div>
+            </div>
+        </div>
+
+        <!-- Grid Container 2 -->
+        <div class="main-container">
+            <div class="grid-container" id="grid2">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>4</th>
+                            <th>3</th>
+                            <th>2</th>
+                            <th>1</th>
+                            <th>TOTAL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="row-label">MC</td>
+                            <td><input type="checkbox" data-points="4" data-row="mc" data-grid="2"></td>
+                            <td><input type="checkbox" data-points="3" data-row="mc" data-grid="2"></td>
+                            <td><input type="checkbox" data-points="2" data-row="mc" data-grid="2"></td>
+                            <td><input type="checkbox" data-points="1" data-row="mc" data-grid="2"></td>
+                            <td class="total-cell" id="mc-total-2">0</td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">PERCEPTION</td>
+                            <td><input type="checkbox" data-points="4" data-row="perception" data-grid="2"></td>
+                            <td><input type="checkbox" data-points="3" data-row="perception" data-grid="2"></td>
+                            <td><input type="checkbox" data-points="2" data-row="perception" data-grid="2"></td>
+                            <td><input type="checkbox" data-points="1" data-row="perception" data-grid="2"></td>
+                            <td class="total-cell" id="perception-total-2">0</td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">IMPACT</td>
+                            <td><input type="checkbox" data-points="4" data-row="impact" data-grid="2"></td>
+                            <td><input type="checkbox" data-points="3" data-row="impact" data-grid="2"></td>
+                            <td><input type="checkbox" data-points="2" data-row="impact" data-grid="2"></td>
+                            <td><input type="checkbox" data-points="1" data-row="impact" data-grid="2"></td>
+                            <td class="total-cell" id="impact-total-2">0</td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">VE</td>
+                            <td><input type="checkbox" data-points="4" data-row="ve" data-grid="2"></td>
+                            <td><input type="checkbox" data-points="3" data-row="ve" data-grid="2"></td>
+                            <td><input type="checkbox" data-points="2" data-row="ve" data-grid="2"></td>
+                            <td><input type="checkbox" data-points="1" data-row="ve" data-grid="2"></td>
+                            <td class="total-cell" id="ve-total-2">0</td>
+                        </tr>
+                        <tr class="grand-total-row">
+                            <td colspan="5" class="grand-total-label">TOTAL</td>
+                            <td class="grand-total-cell" id="grand-total-2">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="result-container">
+                <h3>Result Type</h3>
+                <div class="result-options">
+                    <div class="result-option">NO</div>
+                    <div class="result-option">M</div>
+                    <div class="result-option">Y</div>
+                    <div class="result-option">NMC</div>
+                </div>
+                <div class="result-display" id="result-2"></div>
+            </div>
+        </div>
+
+        <!-- Grid Container 3 -->
+        <div class="main-container">
+            <div class="grid-container" id="grid3">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>4</th>
+                            <th>3</th>
+                            <th>2</th>
+                            <th>1</th>
+                            <th>TOTAL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="row-label">MC</td>
+                            <td><input type="checkbox" data-points="4" data-row="mc" data-grid="3"></td>
+                            <td><input type="checkbox" data-points="3" data-row="mc" data-grid="3"></td>
+                            <td><input type="checkbox" data-points="2" data-row="mc" data-grid="3"></td>
+                            <td><input type="checkbox" data-points="1" data-row="mc" data-grid="3"></td>
+                            <td class="total-cell" id="mc-total-3">0</td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">PERCEPTION</td>
+                            <td><input type="checkbox" data-points="4" data-row="perception" data-grid="3"></td>
+                            <td><input type="checkbox" data-points="3" data-row="perception" data-grid="3"></td>
+                            <td><input type="checkbox" data-points="2" data-row="perception" data-grid="3"></td>
+                            <td><input type="checkbox" data-points="1" data-row="perception" data-grid="3"></td>
+                            <td class="total-cell" id="perception-total-3">0</td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">IMPACT</td>
+                            <td><input type="checkbox" data-points="4" data-row="impact" data-grid="3"></td>
+                            <td><input type="checkbox" data-points="3" data-row="impact" data-grid="3"></td>
+                            <td><input type="checkbox" data-points="2" data-row="impact" data-grid="3"></td>
+                            <td><input type="checkbox" data-points="1" data-row="impact" data-grid="3"></td>
+                            <td class="total-cell" id="impact-total-3">0</td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">VE</td>
+                            <td><input type="checkbox" data-points="4" data-row="ve" data-grid="3"></td>
+                            <td><input type="checkbox" data-points="3" data-row="ve" data-grid="3"></td>
+                            <td><input type="checkbox" data-points="2" data-row="ve" data-grid="3"></td>
+                            <td><input type="checkbox" data-points="1" data-row="ve" data-grid="3"></td>
+                            <td class="total-cell" id="ve-total-3">0</td>
+                        </tr>
+                        <tr class="grand-total-row">
+                            <td colspan="5" class="grand-total-label">TOTAL</td>
+                            <td class="grand-total-cell" id="grand-total-3">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="result-container">
+                <h3>Result Type</h3>
+                <div class="result-options">
+                    <div class="result-option">NO</div>
+                    <div class="result-option">M</div>
+                    <div class="result-option">Y</div>
+                    <div class="result-option">NMC</div>
+                </div>
+                <div class="result-display" id="result-3"></div>
+            </div>
+        </div>
+
+        <!-- Final Result Container -->
+        <div class="final-result-container" id="final-result-container">
+            <h2>Final Assessment Result</h2>
+            <div class="final-result-display" id="final-result"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
