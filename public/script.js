@@ -135,8 +135,8 @@ function checkFinalResult() {
     const iqInput = document.getElementById('iq-input').value;
     const iqMarks = parseInt(iqInput) || 0;
     
-    // Check if IQ marks is actually entered (not just 0 or empty)
-    if (!iqInput || iqInput === '0' || iqMarks === 0) {
+    // Check if IQ marks is at least 2 digits (minimum 10)
+    if (!iqInput || iqMarks < 10) {
         document.getElementById('final-result-container').style.display = 'none';
         return;
     }
@@ -183,6 +183,10 @@ function checkFinalResult() {
         resultClass = 'fully-boarded';
     }
     else if (countN === 1 && countM === 2 && iqMarks >= 83) { // 1xN, 2xM & 83 Above
+        finalResult = 'TO BE FULLY BOARDED';
+        resultClass = 'fully-boarded';
+    }
+    else if (countY === 2 && iqMarks >= 86) { // 2xY & 86 and Above
         finalResult = 'TO BE FULLY BOARDED';
         resultClass = 'fully-boarded';
     }
