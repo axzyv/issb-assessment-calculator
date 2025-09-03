@@ -59,6 +59,18 @@ body {
     border-radius: 5px;
 }
 
+.main-container:nth-child(3) {
+    background-color: #ffff00;
+}
+
+.main-container:nth-child(4) {
+    background-color: #00ff99;
+}
+
+.main-container:nth-child(5) {
+    background-color: #feccff;
+}
+
 .grid-container {
     flex: 2;
 }
@@ -69,34 +81,46 @@ body {
     background-color: white;
 }
 
+#grid1 table {
+    background-color: #ffff00;
+}
+
+#grid2 table {
+    background-color: #00ff99;
+}
+
+#grid3 table {
+    background-color: #feccff;
+}
+
 .grid-container th,
 .grid-container td {
     border: 2px solid #333;
-    padding: 6px;
+    padding: 8px;
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .grid-container th {
-    background-color: #e0e0e0;
+    background-color: inherit;
     font-weight: bold;
 }
 
 .row-label {
-    background-color: #e0e0e0;
+    background-color: inherit;
     font-weight: bold;
     text-align: left;
     padding-left: 10px;
 }
 
 .total-cell {
-    background-color: #e0e0e0;
+    background-color: inherit;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .grand-total-row {
-    background-color: #ccc;
+    background-color: inherit;
 }
 
 .grand-total-label {
@@ -107,12 +131,12 @@ body {
 .grand-total-cell {
     font-weight: bold;
     font-size: 18px;
-    background-color: #ccc;
+    background-color: inherit;
 }
 
 .grid-container input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
 }
 
@@ -150,11 +174,10 @@ body {
 .final-result-container {
     background-color: #d3d3d3;
     padding: 20px;
-    margin: 20px auto 0 auto;
+    margin-bottom: 15px;
     border-radius: 5px;
     text-align: center;
     display: none;
-    max-width: 500px;
 }
 
 .final-result-container h2 {
